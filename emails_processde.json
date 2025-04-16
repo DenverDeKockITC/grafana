@@ -1,94 +1,94 @@
 {
-    "id": 1,
-    "type": "stat",
-    "title": "Emails Processed (Event Rule)",
-    "gridPos": {
-      "x": 0,
-      "y": 0,
-      "h": 3,
-      "w": 6
-    },
-    "fieldConfig": {
-      "defaults": {
-        "mappings": [],
-        "thresholds": {
-          "mode": "absolute",
-          "steps": [
-            {
-              "value": null,
-              "color": "green"
-            },
-            {
-              "value": 80,
-              "color": "red"
-            }
-          ]
-        },
-        "decimals": 0,
-        "unit": "none"
+  "id": 1,
+  "type": "stat",
+  "title": "Emails Processed (Event Rule)",
+  "gridPos": {
+    "x": 0,
+    "y": 7,
+    "h": 6,
+    "w": 7
+  },
+  "fieldConfig": {
+    "defaults": {
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          }
+        ]
       },
-      "overrides": []
+      "decimals": 0,
+      "unit": "none"
     },
-    "pluginVersion": "11.6.0",
-    "targets": [
-      {
-        "alias": "Matched Events",
-        "dimensions": {
-          "RuleName": "artemis-int-bcx-email-trigger-event-rule-af-south-1-992382549029"
-        },
-        "metricName": "MatchedEvents",
-        "namespace": "AWS/Events",
-        "period": "300",
-        "region": "af-south-1",
-        "refId": "A",
-        "metricQueryType": 0,
-        "metricEditorMode": 0,
-        "statistic": "Sum",
-        "datasource": {
-          "type": "cloudwatch",
-          "uid": "your_cloudwatch_datasource_uid"
-        },
-        "label": "Matched Events"
+    "overrides": []
+  },
+  "pluginVersion": "11.6.0",
+  "targets": [
+    {
+      "alias": "Matched Events",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "your_cloudwatch_datasource_uid"
       },
-      {
-        "alias": "Invoked Events",
-        "dimensions": {
-          "RuleName": "artemis-int-bcx-email-trigger-event-rule-af-south-1-992382549029"
-        },
-        "metricName": "SuccessfulInvocationAttempts",
-        "namespace": "AWS/Events",
-        "period": "300",
-        "region": "af-south-1",
-        "refId": "B",
-        "metricQueryType": 0,
-        "metricEditorMode": 0,
-        "statistic": "Sum",
-        "datasource": {
-          "type": "cloudwatch",
-          "uid": "your_cloudwatch_datasource_uid"
-        },
-        "label": "Invoked Events"
-      }
-    ],
-    "datasource": {
-      "uid": "aeizh9fxgc3cwd",
-      "type": "cloudwatch"
+      "dimensions": {
+        "RuleName": "artemis-int-bcx-email-trigger-event-rule-af-south-1-992382549029"
+      },
+      "label": "Matched Events",
+      "metricEditorMode": 0,
+      "metricName": "MatchedEvents",
+      "metricQueryType": 0,
+      "namespace": "AWS/Events",
+      "period": "300",
+      "refId": "A",
+      "region": "af-south-1",
+      "statistic": "Sum"
     },
-    "options": {
-      "reduceOptions": {
-        "values": false,
-        "calcs": [
-          "sum"
-        ],
-        "fields": ""
+    {
+      "alias": "Invoked Events",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "your_cloudwatch_datasource_uid"
       },
-      "orientation": "horizontal",
-      "textMode": "value_and_name",
-      "wideLayout": true,
-      "colorMode": "value",
-      "graphMode": "none",
-      "justifyMode": "center",
-      "showPercentChange": false,
-      "percentChangeColorMode": "standard"
+      "dimensions": {
+        "RuleName": "artemis-int-bcx-email-trigger-event-rule-af-south-1-992382549029"
+      },
+      "label": "Invoked Events",
+      "metricEditorMode": 0,
+      "metricName": "SuccessfulInvocationAttempts",
+      "metricQueryType": 0,
+      "namespace": "AWS/Events",
+      "period": "300",
+      "refId": "B",
+      "region": "af-south-1",
+      "statistic": "Sum"
+    }
+  ],
+  "datasource": {
+    "type": "cloudwatch",
+    "uid": "aeizn5lo7miv4d"
+  },
+  "options": {
+    "reduceOptions": {
+      "values": false,
+      "calcs": [
+        "sum"
+      ],
+      "fields": ""
+    },
+    "orientation": "horizontal",
+    "textMode": "value_and_name",
+    "wideLayout": true,
+    "colorMode": "value",
+    "graphMode": "none",
+    "justifyMode": "center",
+    "showPercentChange": false,
+    "percentChangeColorMode": "standard",
+    "text": {
+      "titleSize": 20,
+      "valueSize": 60
     }
   }
+}

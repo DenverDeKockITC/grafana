@@ -1,0 +1,113 @@
+{
+    "id": 2,
+    "type": "timeseries",
+    "title": "Validator (Event Rule)",
+    "gridPos": {
+      "x": 0,
+      "y": 1,
+      "h": 6,
+      "w": 22
+    },
+    "fieldConfig": {
+      "defaults": {
+        "custom": {
+          "drawStyle": "line",
+          "lineInterpolation": "linear",
+          "barAlignment": 0,
+          "barWidthFactor": 0.6,
+          "lineWidth": 1,
+          "fillOpacity": 0,
+          "gradientMode": "none",
+          "spanNulls": false,
+          "insertNulls": false,
+          "showPoints": "auto",
+          "pointSize": 5,
+          "stacking": {
+            "mode": "none",
+            "group": "A"
+          },
+          "axisPlacement": "auto",
+          "axisLabel": "",
+          "axisColorMode": "text",
+          "axisBorderShow": false,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "axisCenteredZero": false,
+          "hideFrom": {
+            "tooltip": false,
+            "viz": false,
+            "legend": false
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "color": {
+          "mode": "fixed",
+          "fixedColor": "dark-blue"
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        }
+      },
+      "overrides": []
+    },
+    "pluginVersion": "11.6.0",
+    "targets": [
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "RuleName": "artemis-int-bcx-trigger-event-rule-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": true,
+        "metricEditorMode": 0,
+        "metricName": "MatchedEvents",
+        "metricQueryType": 0,
+        "namespace": "AWS/Events",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "B",
+        "region": "default",
+        "sqlExpression": "",
+        "statistic": "SampleCount"
+      }
+    ],
+    "datasource": {
+      "type": "cloudwatch",
+      "uid": "aeizn5lo7miv4d"
+    },
+    "options": {
+      "tooltip": {
+        "mode": "single",
+        "sort": "none",
+        "hideZeros": false
+      },
+      "legend": {
+        "showLegend": true,
+        "displayMode": "list",
+        "placement": "bottom",
+        "calcs": []
+      }
+    }
+  }

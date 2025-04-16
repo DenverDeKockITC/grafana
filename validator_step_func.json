@@ -1,0 +1,308 @@
+{
+    "id": 4,
+    "type": "stat",
+    "title": "Validator (Step Function)",
+    "gridPos": {
+      "x": 7,
+      "y": 7,
+      "h": 6,
+      "w": 15
+    },
+    "fieldConfig": {
+      "defaults": {
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "color": {
+          "mode": "fixed"
+        }
+      },
+      "overrides": [
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "ExecutionsStarted"
+          },
+          "properties": [
+            {
+              "id": "color",
+              "value": {
+                "fixedColor": "dark-blue",
+                "mode": "fixed"
+              }
+            }
+          ]
+        },
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "ExecutionThrottled"
+          },
+          "properties": [
+            {
+              "id": "color",
+              "value": {
+                "fixedColor": "dark-orange",
+                "mode": "fixed"
+              }
+            }
+          ]
+        },
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "ExecutionsSucceeded"
+          },
+          "properties": [
+            {
+              "id": "color",
+              "value": {
+                "fixedColor": "dark-green",
+                "mode": "fixed"
+              }
+            }
+          ]
+        },
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "ExecutionsFailed"
+          },
+          "properties": [
+            {
+              "id": "color",
+              "value": {
+                "fixedColor": "dark-red",
+                "mode": "fixed"
+              }
+            }
+          ]
+        },
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "ExecutionsAborted"
+          },
+          "properties": [
+            {
+              "id": "color",
+              "value": {
+                "fixedColor": "dark-purple",
+                "mode": "fixed"
+              }
+            }
+          ]
+        },
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "ExecutionsTimedOut"
+          },
+          "properties": [
+            {
+              "id": "color",
+              "value": {
+                "fixedColor": "#4f211d",
+                "mode": "fixed"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "pluginVersion": "11.6.0",
+    "targets": [
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "StateMachineArn": "arn:aws:states:af-south-1:992382549029:stateMachine:artemis-int-bcx-validator-step-function-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": false,
+        "metricEditorMode": 0,
+        "metricName": "ExecutionsStarted",
+        "metricQueryType": 0,
+        "namespace": "AWS/States",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "B",
+        "region": "af-south-1",
+        "sqlExpression": "",
+        "statistic": "Sum"
+      },
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "StateMachineArn": "arn:aws:states:af-south-1:992382549029:stateMachine:artemis-int-bcx-validator-step-function-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": false,
+        "metricEditorMode": 0,
+        "metricName": "ExecutionThrottled",
+        "metricQueryType": 0,
+        "namespace": "AWS/States",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "A",
+        "region": "af-south-1",
+        "sqlExpression": "",
+        "statistic": "Sum"
+      },
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "StateMachineArn": "arn:aws:states:af-south-1:992382549029:stateMachine:artemis-int-bcx-validator-step-function-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": false,
+        "metricEditorMode": 0,
+        "metricName": "ExecutionsSucceeded",
+        "metricQueryType": 0,
+        "namespace": "AWS/States",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "C",
+        "region": "af-south-1",
+        "sqlExpression": "",
+        "statistic": "Sum"
+      },
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "StateMachineArn": "arn:aws:states:af-south-1:992382549029:stateMachine:artemis-int-bcx-validator-step-function-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": false,
+        "metricEditorMode": 0,
+        "metricName": "ExecutionsFailed",
+        "metricQueryType": 0,
+        "namespace": "AWS/States",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "D",
+        "region": "af-south-1",
+        "sqlExpression": "",
+        "statistic": "Sum"
+      },
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "StateMachineArn": "arn:aws:states:af-south-1:992382549029:stateMachine:artemis-int-bcx-validator-step-function-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": false,
+        "metricEditorMode": 0,
+        "metricName": "ExecutionsAborted",
+        "metricQueryType": 0,
+        "namespace": "AWS/States",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "E",
+        "region": "af-south-1",
+        "sqlExpression": "",
+        "statistic": "Sum"
+      },
+      {
+        "datasource": {
+          "type": "cloudwatch",
+          "uid": "aeizn5lo7miv4d"
+        },
+        "dimensions": {
+          "StateMachineArn": "arn:aws:states:af-south-1:992382549029:stateMachine:artemis-int-bcx-validator-step-function-af-south-1-992382549029"
+        },
+        "expression": "",
+        "hide": false,
+        "id": "",
+        "label": "",
+        "logGroups": [],
+        "matchExact": false,
+        "metricEditorMode": 0,
+        "metricName": "ExecutionsTimedOut",
+        "metricQueryType": 0,
+        "namespace": "AWS/States",
+        "period": "",
+        "queryLanguage": "CWLI",
+        "queryMode": "Metrics",
+        "refId": "F",
+        "region": "af-south-1",
+        "sqlExpression": "",
+        "statistic": "Sum"
+      }
+    ],
+    "datasource": {
+      "type": "cloudwatch",
+      "uid": "aeizn5lo7miv4d"
+    },
+    "options": {
+      "reduceOptions": {
+        "values": false,
+        "calcs": [
+          "sum"
+        ],
+        "fields": ""
+      },
+      "orientation": "vertical",
+      "textMode": "value_and_name",
+      "wideLayout": false,
+      "colorMode": "value",
+      "graphMode": "none",
+      "justifyMode": "center",
+      "showPercentChange": false,
+      "percentChangeColorMode": "standard",
+      "text": {
+        "titleSize": 15,
+        "valueSize": 50
+      }
+    }
+  }
